@@ -1,1 +1,8 @@
+# Output files
 /target
+
+# test commit script
+test.sh
+
+# GitHub Personal Access Token
+PAT.txt
