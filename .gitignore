@@ -2,7 +2,7 @@
 /target
 
 # test commit script
-test.sh
+push.sh
 
 # GitHub Personal Access Token
 PAT.txt
