@@ -4,7 +4,7 @@
 
 `Proton` is a mathematical engine written in `Rust`.
 
-`Proton` is built on [`proton_lite`](https://github.com/51ddhesh/proton_lit.git).
+`Proton` is built on [`proton_lite`](https://github.com/51ddhesh/proton_lite.git).
 
 
 ## Features under development
