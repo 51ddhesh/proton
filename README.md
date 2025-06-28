@@ -20,10 +20,12 @@ proton/                    # Project root
 ├── src/                   # Source code directory
 │   ├── main.rs            # Placeholder for an API service
 │   ├── expr.rs            # Expression parsing and representation
+│   ├── eval.rs            # Expression evaluation
 │   ├── format.rs          # Formatting utilities for expressions/output
 │   └── lib.rs             # Library entry point
 ├── tests/                 # Integration and unit tests
-│   └── pretty_print.rs    # Tests for pretty-printing functionality
+│   ├── pretty_print.rs    # Tests for pretty-printing functionality
+│   └── eval.rs            # Tests for expression evaluation  
 ├── README.md              # Project documentation
 ├── Cargo.toml             # Rust package manifest
 ├── Cargo.lock             # Cargo dependency lockfile
