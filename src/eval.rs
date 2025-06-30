@@ -14,7 +14,6 @@ use std::collections::HashMap;  // Import HashMap to store variables and their a
 ///
 /// # Panics
 /// - If an unknown function name is encountered, the function will panic with a descriptive error message.
-#[allow(unreachable_patterns)]  // Allow unreachable patterns warning, as the match arms are exhaustive for the Expr enum.
 pub fn evaluate(expr: &Expr, vars: &HashMap<String, f64>) -> f64 {
     match expr {
         // Case 1: Number literal. Simply return the value of the number.

@@ -1,17 +1,11 @@
 use crate::expr::Expr;
 
+/// fn pretty_print(&Expr) -> String
 /// Recursively generates a human-readable string representation of an expression tree.
-// 
 /// # Arguments
-// * `expr` - A reference to an `Expr` enum variant representing a mathematical expression.
-// 
+/// `expr` - A reference to an `Expr` enum variant representing a mathematical expression.
 /// # Returns
 /// A `String` containing the pretty-printed version of the expression, with appropriate parentheses and formatting.
-// 
-// # Example
-// let expr = Expr::Add(Box::new(Expr::Number(2.0)), Box::new(Expr::Variable("x".to_string())));
-// let s = pretty_print(&expr);
-// assert_eq!(s, "(2 + x)");
 pub fn pretty_print(expr: &Expr) -> String {
     match expr {
         // Numeric literal, e.g., 2.0
@@ -44,3 +38,25 @@ pub fn pretty_print(expr: &Expr) -> String {
         }
     }
 }
+
+
+/// fn strip_outer_parantheses(String) -> String
+/// Strips the outer parantheses of the formatted expression
+/// Generally, should be used after receiving the formatted string of the expression from `proton::format::pretty_print`
+/// # Arguments 
+/// `String` - the formatted string form of the `proton::expr::Expr` which contains outer parantheses
+/// # Returns
+/// `String` - A string without its outer parantheses
+pub fn strip_outer_parantheses(mut s: String) -> String {
+    // Check if the `String` has outer parantheses
+    if s.starts_with(&['(']) && s.ends_with(&[')']) {
+        s.pop();
+        s.remove(0);
+        return s;
+    }
+    // Default return value when the `String` does not contain any outer parantheses
+    s
+}
+
+
+   
