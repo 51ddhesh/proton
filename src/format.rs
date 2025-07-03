@@ -1,6 +1,6 @@
 use crate::expr::Expr;
 
-/// fn pretty_print(&Expr) -> String
+/// `fn pretty_print(&Expr) -> String`
 /// Recursively generates a human-readable string representation of an expression tree.
 /// # Arguments
 /// `expr` - A reference to an `Expr` enum variant representing a mathematical expression.
@@ -40,7 +40,7 @@ pub fn pretty_print(expr: &Expr) -> String {
 }
 
 
-/// fn strip_outer_parantheses(String) -> String
+/// `fn strip_outer_parantheses(String) -> String`
 /// Strips the outer parantheses of the formatted expression
 /// Generally, should be used after receiving the formatted string of the expression from `proton::format::pretty_print`
 /// # Arguments 

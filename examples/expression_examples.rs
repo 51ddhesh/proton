@@ -7,8 +7,10 @@ use proton::format::{pretty_print, strip_outer_parantheses};
 /// An expression made using `proton::expr::Expr` can be of any type
 /// It can be a number, a variable, an algebraic function using trigonometric functions as well
 /// In the function below, an expression containing only a number is made 
+/// The enum `proton::expr::Expr` has multiple members, of which, the Number is used here which is defined as a f64
 fn create_expression_number() {
-    
+    let exp: Expr = Expr::Number(1.0);
+    println!("{}", pretty_print(&exp));
 }
 
 fn main() {
